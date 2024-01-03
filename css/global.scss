@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@400&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+}
+
+img {
+  object-fit: cover;
+}
+
+body {
+  background-color: #15192d;
+}
+
+a {
+  text-decoration: none;
+  color: $clickable-elements-color;
+  cursor: pointer;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+li {
+  color: $main-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+span {
+  font-family: poppins;
+}
+
+h1 {
+  font-size: 76px;
+}
+
+h2 {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 47px;
+}
+
+h3 {
+  font-size: 29px;
+}
+
+p,
+button,
+a {
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+  padding-bottom: 60px;
+  .line {
+    position: absolute;
+    border: 2px solid $main-color;
+    width: 200px;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+section,
+header,
+footer {
+  transition: opacity 0.7s linear;
+}
+
+@media screen and (max-width: 1440px) {
+  h1 {
+    font-size: 47px;
+  }
+
+  h2 {
+    padding: 30px 0;
+    font-size: 29px;
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}

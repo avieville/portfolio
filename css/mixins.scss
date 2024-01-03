@@ -1,0 +1,24 @@
+// MEDIA QUERIES
+@mixin for-phone-only {
+  @media (max-width: $breakpoint-big-phone) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media (max-width: $breakpoint-big-tablet) {
+    @content;
+  }
+}
+
+@mixin for-laptop-only {
+  @media (max-width: $breakpoint-big-laptop) {
+    @content;
+  }
+}
+
+@mixin for-desktop-only {
+  @media (max-width: $breakpoint-big-desktop) {
+    @content;
+  }
+}

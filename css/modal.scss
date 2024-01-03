@@ -1,0 +1,53 @@
+.modal {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
+  &__content {
+    position: relative;
+    padding: 30px 20px;
+    width: 600px;
+    max-height: 50%;
+    background-color: $main-color;
+    overflow-y: auto;
+
+    h3,
+    p,
+    li,
+    span {
+      color: #15192d;
+    }
+
+    .modal-details {
+      margin-bottom: 8px;
+    }
+
+    ul {
+      display: flex;
+      gap: 8px;
+      li:not(:last-child) {
+        border-right: 4px solid #15192d;
+        padding-right: 8px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.show {
+  display: flex;
+  opacity: 1;
+}

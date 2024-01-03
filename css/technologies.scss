@@ -1,0 +1,27 @@
+.technologies {
+  margin: 0 100px;
+  img {
+    transition: opacity 0.6s linear;
+  }
+  .technos-icons {
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 128px 128px 128px 128px;
+    grid-row-gap: 50px;
+  }
+
+  @include for-laptop-only {
+    .technos-icons {
+      justify-content: center;
+      grid-template-columns: 128px 128px;
+      grid-column-gap: 100px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    .technos-icons {
+      grid-template-columns: 128px;
+    }
+  }
+}

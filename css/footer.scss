@@ -1,0 +1,84 @@
+@use "sass:math";
+
+.footer {
+  position: relative;
+  margin: 0 100px;
+  position: relative;
+  height: 400px;
+  .line-top-left,
+  .line-top-right {
+    position: absolute;
+    border-top: 4px solid $main-color;
+    top: 0;
+    width: calc(50% - 151.5px);
+  }
+
+  .line-top-left {
+    left: 0;
+  }
+
+  .line-top-right {
+    right: 0;
+  }
+  .computer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -90px);
+  }
+  .cofee {
+    position: absolute;
+    right: 115px;
+    top: 100px;
+
+    .smoke {
+      display: flex;
+
+      @for $i from 1 through 8 {
+        span:nth-child(#{$i}) {
+          width: 3px;
+          height: 20px;
+          border-radius: 50%;
+          margin: 0 2px;
+          background: lighten($main-color, 100%);
+          animation: animate 3s linear infinite;
+          filter: blur(7px);
+          animation-delay: math.random() * 2s;
+        }
+      }
+    }
+  }
+
+  p {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    text-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 760px) {
+    margin: 0;
+    .cofee {
+      top: 150px;
+      right: 50px;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-150px) scaleX(5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-250px) scaleX(6);
+  }
+}
