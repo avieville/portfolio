@@ -80,7 +80,7 @@ if (cardsContainer) {
     modalContent.className = "modal__content";
 
     const closingCross = document.createElement("img");
-    closingCross.src = "/images/cross.svg";
+    closingCross.src = "/portfolio/images/cross.svg";
     closingCross.alt = "closing cross";
     closingCross.className = "close-modal";
     modalContent.appendChild(closingCross);
